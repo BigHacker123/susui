@@ -7387,10 +7387,7 @@ do
                 --
                 return list
             end
-        end
-    end)();
-end;
---
+        --
 function library:UpdateColor(ColorType, ColorValue)
     local ColorType = ColorType:lower()
     --
@@ -7405,4 +7402,8 @@ function library:UpdateColor(ColorType, ColorValue)
     end
 end
 --
+        end
+    end)();
+end;
+
 return library, library.utility, library.pointers, library.theme;
