@@ -1,11 +1,7 @@
 --[[
-    To Do:
-
-    [+] Notifications
-    [+] Finish Documentation (Everything)
-    
-    @gs.cc
+--// Editted by beamed.solutions
 ]]
+
 if not LPH_OBFUSCATED then
     LPH_JIT = function(...) return ... end
     LPH_JIT_MAX = function(...) return ... end
