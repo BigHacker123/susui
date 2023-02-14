@@ -1220,8 +1220,8 @@ do
                 --
                 task.spawn(function()
                     for Index, Value in pairs(window.VisualPreview.Drawings) do
-                        utility:Lerp(Index, {Transparency = window.VisualPreview.State and Value or 0}, 0.2)
-                        utility:UpdateTransparency(Index, window.VisualPreview.State and Value or 0)
+                        utility:Lerp(Index, {Transparency = window.VisualPreview.State and Value or 1}, 0.2)
+                        utility:UpdateTransparency(Index, window.VisualPreview.State and Value or 1)
                     end
                 end)
                 --
