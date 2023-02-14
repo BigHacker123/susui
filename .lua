@@ -1822,14 +1822,13 @@ do
                 temp = tick()
                 library.shared.ping = stats.Network:FindFirstChild("ServerStatsItem") and tostring(math.round(stats.Network.ServerStatsItem["Data Ping"]:GetValue())) or "Unknown"
                 --
-                task.spawn(function()
-                    if (tick() - Tick) > 0.15 then
-                        watermark_title.Text = window.wminfo:gsub("$PING", library.shared.ping):gsub("$FPS", library.shared.fps)
-                        window.watermark:UpdateSize()
-                        --
-                        Tick = tick()
-                    end
-                end)
+                local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+                if (tick() - Tick) > 0.15 then
+                    watermark_title.Text = string.format("beamed.solutions | ms = %s | fps = %u | "..GameName, library.shared.ping, library.shared.fps)
+                    window.watermark:UpdateSize()
+                    --
+                    Tick = tick()
+                end
             end)
             --
             return window.watermark
